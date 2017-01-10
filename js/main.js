@@ -89,26 +89,35 @@ function toOneDimension(array,newArray){
 // x=x.toLowerCase();
 // console.log(x);
 
-var string='test string';
-console.log(string.substring(1,5));//'est'
-console.log(string.slice(1,5));//'est'
-console.log(string.substr(1,5));//'est'
+ var string='test string';
+// console.log(string.substring(1,5));//'est'
+// console.log(string.slice(1,5));//'est'
+// console.log(string.substr(1,5));//'est'
 
-console.log(string.substring(5,1));//'est'
-console.log(string.slice(5,1))//''
+// console.log(string.substring(5,1));//'est'
+// console.log(string.slice(5,1))//''
 
-console.log(string.substring(5,-1));//'test'
-console.log(string.slice(5,-1));//'strin'
-console.log(string.slice(-5,-1));//'trin'
+// console.log(string.substring(5,-1));//'test'
+// console.log(string.slice(5,-1));//'strin'
+// console.log(string.slice(-5,-1));//'trin'
 
-
-
-
-
+// console.log(string.indexOf("t"));//0
+// console.log(string.lastIndexOf("t"));//6
 
 
+// console.log(string.indexOf("est"));//1
+// console.log(string.lastIndexOf("ing"));//8
 
+// var x=~25;//-(25+1)//-26
+// console.log(x);
+// var x=~-10;//-(25+1)//9
+// console.log(x);
+// console.log(~-1);//0
+// console.log(~0);//-1
 
+var x="some string";
+console.log(~string.indexOf("t"));
+console.log(~string.indexOf("black"));
 
 
 
