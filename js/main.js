@@ -1,25 +1,63 @@
+$(document).ready(function () {
+	//console.log("Ready 1");
+});
 
+$(document).on("ready",function () {
+	//console.log("Ready 2");
+});
 
+$(function () {
+	//console.log("Ready 3");
+});
 
+var mainTitle=$("h1.mainTitle");
+var spanText=$("span.text");
 
+// console.log(mainTitle.children());
+// console.log(mainTitle.children("input"));
 
+// console.log(mainTitle.parent());
+// console.log(mainTitle.parent("div"));
 
+// console.log(mainTitle.parents());
+// console.log(mainTitle.parents("body"));
+// console.log(mainTitle.find("*"));
+// console.log(mainTitle.find(".text"));
 
+// console.log(spanText.prev());
+// console.log(spanText.prev("div"));
+// console.log(spanText.next());
+// console.log(spanText.next("input"));
 
+// mainTitle.addClass("test");
+// console.log(mainTitle.hasClass("test"));
+// mainTitle.removeClass("test");
+// console.log(mainTitle.hasClass("test"));
+// mainTitle.toggleClass("test");
 
+// console.log($("img").attr("src"));
+// $("img").attr("src","images/tasd.gif");
+// $("img").removeAttr("src");
 
+// console.log($("img").prop("src"));
+// $("img").prop("src","asd");
+// $("img").removeProp("src");
+// console.log(mainTitle[0]);
 
+// console.log(mainTitle.html());
+// console.log(mainTitle[0].innerHTML);
+// mainTitle.html("<div>text</div>");
+// mainTitle[0].HTML="<div>text</div>";
 
+// console.log($("<div>text</div>"));
+// var clikableButton=$("<div>BUTTON</div>")
+	// .css("color","red")
+	// .on("click",function () {alert("asd")});
+	// mainTitle.find("span.text").html(clikableButton);
 
-
-
-
-
-
-
-
-
-
+console.log($("input").val());
+$("input").val("test");
+console.log($("input").val());
 
 
 
@@ -54,10 +92,10 @@
 	// console.log(keys[i], obj[keys[i]]);
 // }
 
-var object={
-	"key1":10,
-	"key2":15
-}
+// var object={
+	// "key1":10,
+	// "key2":15
+// }
 // Object.defineProperty(object,"key1",{
 	// writable:false
 // })
@@ -101,10 +139,10 @@ var object={
 // object.test=10;
 // console.log(object.test);
 
-var object={
-	firstName:"test",
-	lastName:"test2"
-}
+// var object={
+	// firstName:"test",
+	// lastName:"test2"
+// }
 // Object.defineProperty(object,"fullname",{
 // get:function(){
 	// return this.firstName+" "+this.lastName;
@@ -281,12 +319,12 @@ var object={
 // });
 // console.log(isArrayHasNull);
 
-var array=[1,2,3,4,5];
+// var array=[1,2,3,4,5];
 
-var summOfNumbers=array.reduce(function(startValue,element,index,array){
-	return startValue+element;
-},0);
-console.log(summOfNumbers);
+// var summOfNumbers=array.reduce(function(startValue,element,index,array){
+	// return startValue+element;
+// },0);
+// console.log(summOfNumbers);
 
 
 
