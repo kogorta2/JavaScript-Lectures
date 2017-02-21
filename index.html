@@ -3,7 +3,8 @@
 	<head>
 		<title>Base template</title>
 		<link type="text/css" rel="stylesheet" media="all" href="css/main.css" />
-		<script src="js/main.js"></script>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="js/main.js" defer></script>
 	</head>
 	<body>
 		<!-- This is base template for testing -->
@@ -11,5 +12,29 @@
 			<img class="logo" src="images/logo.png" alt=""/>
 			<span class="text">Base template</span>
 		</h1>
+		<form id="Form">
+   <div class="formContainer">
+    <div>
+     <label>Name <input type="text" id="Phone" /></label>
+    </div>
+    <div>
+     <label>Email <input type="text" /></label>
+    </div>
+    <div>
+     <label>Phone <input type="text" /></label>
+    </div>
+    <div>
+     <label><input type="radio" name="userType" />Student</label><br>
+     <label><input type="radio" name="userType" />Employee</label><br>
+     <label><input type="radio" name="userType" />Head</label>
+    </div>
+    <div>
+     <label><input type="checkbox" /> Confirm our rules</label>
+    </div>
+	<div class="foo">
+    <button type="submit">Submit</button>
+	</div>
+   </div>
+  </form>
 	</body>
 </html>
