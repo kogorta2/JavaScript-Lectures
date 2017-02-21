@@ -234,26 +234,4 @@ zoo.setClockTime(13,03);
 
 
 
-$(document).ready(function(){
-
-	// function validateAndSubmit() {
-		// $('#Form').submit(function(e){e.preventDefault()})
-		// // // $('#Form').submit(function(){if($("#Phone").val()=="fff"){
-			// // // //$("#Phone").remove();
-			// // // $("#Phone").prop("disabled",true)
-			// // // }});
-		// // // // var allInput=$('label>input');
-		// // // // console.log(allInput);
-		// $('div').addClass('invalid');
-		
-		
-	// }
-	$('submit').on('click', function validateAndSubmit(){$('#Form').submit(function(e){
-		e.preventDefault();})});
-	
-	
-	
-	
-
-});
 
