@@ -8,3 +8,9 @@
 .mainTitle .text {
 	vertical-align:middle;
 }
+.jqueryTestContainer{
+	width:50%;
+	font-size:30px;
+	margin:0 auto;
+	background:#dfdfdf;
+}
