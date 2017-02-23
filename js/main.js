@@ -150,12 +150,17 @@ var $test=$(".jqueryTestContainer");
 // $("h5",$test).replaceWith($("ul",$test));
 // $("ul",$test).on("click",function(){alert("asd")});
 // $("h5",$test).replaceWith($("ul",$test).clone());
-$("ul",$test).clone().replaceAll($("h5",$test));
+// $("ul",$test).clone().replaceAll($("h5",$test));
+
+// $("li, span",$test).each(function(index,element){
+	// console.log(index,element);
+// });
 
 
-
-
-
+// console.log("index",$("li").index());
+// console.log("index",$("li").eq(1).index());
+// console.log($("li.third").index());
+// console.log($("h5").index());
 
 
 
