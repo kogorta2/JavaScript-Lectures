@@ -227,9 +227,13 @@ zoo.feedAnimal("Puh1");
 //console.log(zoo.feedAnimal());
 zoo.setClockTime(13,03);
 //console.log(zoo.feedAnimal());
-console.log(zoo.getHungryAnimal());
+//console.log(zoo.getHungryAnimal());
 
-
+ $("submit").on("click",function(e){
+	
+	e.preventDefault();
+	console.log(e);
+})
 
 
 
