@@ -52,3 +52,9 @@
 .todo-list .complete{
 	margin:5px 0 0;
 }
+.gray{
+	background-color:gray;
+}
+.green{
+	background-color:green;
+}
