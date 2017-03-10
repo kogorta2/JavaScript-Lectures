@@ -1,9 +1,8 @@
 $(function(){
 
-
  var users=[];
  var tasks=[];
- var indexUsers=[];
+ var tableUsersTasks=[];
  var emailPattern=/\w+@\w+\.\w+/;
  var usersList=[];
  var $usersContainer=$(".users");
@@ -39,8 +38,9 @@ function addUserFunctionality() {
 				assignedTo:[]
 			})
 		generateUsersList();
-		clearInput(".addUser");
-		
+		tableUsersTasks.push([]);
+		//clearInput(".addUser");
+		//console.log(tableUsersTasks);
 		}
 		else{
 			alert(errorText+"are invalid");
@@ -94,7 +94,7 @@ function generateUser(user){
 	var userName=$('<p class="userName">'+user.name+'</p>');
 	var userEmail=$('<p class="userEmail">'+user.email+'</p>');
 	var assignedLable=$('<label>Assigned</label>');
-	var assignedCheckbox=$('<input type="checkbox" />').appendTo(assignedLable);
+	var assignedCheckbox=$('<input class="check" type="checkbox" />').appendTo(assignedLable);
 	var button=$('<button type="button">Delete user</button>')
 	 .on("click",function(){
 		 removeItem(users,user,generateUsersList);
@@ -149,8 +149,20 @@ function addTaskFunctionality() {
 				assignedTo: []
 			})
 		generateTasksList();
-		clearInput(".addTask");
-		
+		for(var i=0;i<tableUsersTasks.length;i++){
+			if(!tableUsersTasks[i].length){
+				for(var j=0;j<tasks.length;j++){
+					tableUsersTasks[i][j]=0;
+				}
+			}
+			else{
+				for(var j=tasks.length-1;j<tasks.length;j++){
+					tableUsersTasks[i][j]=0;
+				}
+			}
+		}
+		//clearInput(".addTask");
+		//console.log(tableUsersTasks);
 		}
 		else{
 			alert(errorText+"are invalid");
@@ -182,10 +194,10 @@ function generateTask(task){
 	 .on("click",function(){
 		 removeItem(tasks,task,generateTasksList);
 	 });
-	 var buttonComleteTask=$('<button class="complete" type="button">Comlete task</button>')
+	 var buttonComleteTask=$('<button class="complete" type="button">Complete task</button>')
 	 .on("click",function(event){
 		 $(event.target).closest("li").addClass("green");
-		 removeChecked();
+		// removeChecked();
 		 relocateItem(tasks,task,generateTasksList);
 	 });
 	 return li.append([taskTitle,taskCreateDate,taskDescription,taskAssignedTo,buttonDeleteTask,buttonComleteTask]);
@@ -194,47 +206,108 @@ function generateTask(task){
 function activeTask(){
 	
 	$(".tasks").on("click",function(event){
+		
 		removeChecked();
-		$(event.target).closest("li").addClass("gray");
-		$(event.target).closest("li").siblings().removeClass("gray");
+		var objEventTask=$(event.target).closest("li");
+		var indexEvenTask=objEventTask.index();
+		objEventTask.addClass("gray");
+		objEventTask.siblings().removeClass("gray");
+		fixChecked(indexEvenTask,tableUsersTasks);
 		
-		$(".users").find(":checkbox").change(function(event){
-				var objEvent=$(event.target).closest("li");
-				var indexEvent=objEvent.index();
-				
-				if (!findIndex(indexEvent,indexUsers)){
-						indexUsers.push(indexEvent);
-				}
-				else{ 
-						var indexOfElem=indexUsers.indexOf(indexEvent);
-						indexUsers.splice(indexOfElem,1);
-				}
-				
-				$(".gray").data("indexUsers",indexUsers);
-				var data=$(".gray").data("indexUsers");
-				$(".gray").find(".assigned").text(data.length);
-				console.log(data);
-		
-			})
-			
+		$(".users").find(":checkbox").on("change",function(event){
+				var objEventUser=$(event.target).closest("li");
+				var indexEventUser=objEventUser.index();
+				removeTrueOrFalse(indexEventUser,indexEvenTask,tableUsersTasks);
+				var countAssignedUsers=getAssignedUsers(indexEvenTask,tableUsersTasks);
+				$(".gray").find(".assigned").text(countAssignedUsers);
 		})
-	
-	
+	})
 }
-function findIndex(index,array){
-	if(array.some(function(item,i,array){
-		return index===item;
-	})){return true;}
-	else{return false;}
-	
+function findTrueOrFalse(index1,index2,array){
+	for(var i=0;i<array.length;i++){
+		for(var j=0;j<array[i].length;j++){
+			if(i==index1&&j==index2){
+				if(array[i][j]==1){
+					return true;
+				}
+				else{
+					return false;
+				}
+			}
+			else{return false;}
+		}
+	}
 }
-function removeChecked(){
-	 if($(":checkbox").prop("checked")){
-			$(":checkbox").prop("checked",false); 
-		 }
-	
+function removeTrueOrFalse(index1,index2,array){
+	if(!findTrueOrFalse(index1,index2,array)){
+		for(var i=0;i<array.length;i++){
+			if(array[i].length){
+				for(var j=0;j<array[i].length;j++){
+					if(i==index1&&j==index2){
+						array[i][j]=1;
+						
+					}
+				}
+			}
+			else{
+				for(var j=0;j<tasks.length;j++){
+					array[i][j]=0;
+				}
+			}
+		}
+	}
+	else{
+		for(var i=0;i<array.length;i++){
+			if(array[i].length){
+				for(var j=0;j<array[i].length;j++){
+					if(i==index1&&j==index2){
+						array[i][j]=0;
+					}
+				}
+			}
+			else{
+				for(var j=0;j<tasks.length;j++){
+					array[i][j]=0;
+				}
+			}
+		}
+	}
 }
 
+function getAssignedUsers(index2,array){
+	var count=0;
+	for(var i=0;i<array.length;i++){
+		for(var j=0;j<array[i].length;j++){
+			if(j==index2){
+				count+=array[i][j];
+			}	
+		}
+	}
+	return count;
+}
+
+function removeChecked(){
+	if($(":checkbox").prop("checked")){
+		$(":checkbox").prop("checked",false); 
+	}
+}
+
+function fixChecked(index,array){
+	for(var i=0;i<array.length;i++){
+			for(var j=0;j<array[i].length;j++){
+				if(j==index){
+					if(array[i][j]==1){
+						$(".users").find("li").eq(i).find(":checkbox").prop("checked",true);
+					
+					}
+					else{$(".users").find("li").eq(i).find(":checkbox").prop("checked",false);}
+				}
+				else{
+					$(".users").find("li").eq(i).find(":checkbox").prop("checked",false);
+				}
+			}
+		}
+}
 
 })
 
