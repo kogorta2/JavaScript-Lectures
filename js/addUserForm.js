@@ -46,8 +46,8 @@
             $userAnimate.animate({
                 bottom:"+150px",
                 duration:4000
-            })
-            
+            }).fadeTo("slow",0).animate({bottom:"0"}).fadeTo("fast",1);
+            //$userAnimate.stop(true,false);
 
 
 

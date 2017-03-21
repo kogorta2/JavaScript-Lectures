@@ -16,11 +16,14 @@
 
     function createView(controller) {
         var $viewTemplate = $('\
-            <div class="addUser">\
-                <input class="taskTitle" type="text" placeholder="Task title"/>\
-                <textarea class="taskDescription" type="text" placeholder="Task description"></textarea>\
-                <input class="taskId" type="text" placeholder="Task ID"/>\
-                <input class="addTaskButton" type="button" value="Add task">\
+            <div class="addTask">\
+                <div class="welcomeTask"><h3>Task was added</h3></div>\
+                <div class="inputArea"> \
+                 <input class="taskTitle" type="text" placeholder="Task title"/>\
+                 <textarea class="taskDescription" type="text" placeholder="Task description"></textarea>\
+                 <input class="taskId" type="text" placeholder="Task ID"/>\
+                 <input class="addTaskButton" type="button" value="Add task">\
+                </div>\
             </div>'
         );
 
@@ -30,6 +33,31 @@
 
         $viewTemplate.find(".addTaskButton").on("click", function() {
             controller.addTask($taskTitle.val(), $taskDescription.val(), $taskId.val());
+
+            $(".welcomeTask").animate({
+                left:"0px",
+                duration:4000
+            }).delay(1200).animate({
+                left:"+550px",
+               // duration:4000
+            }).fadeTo("slow",0).animate({
+                left:"-450px",
+               // right:"0px"
+            }).fadeTo("fast",1).queue();
+
+            $(".inputArea").animate({
+                left:"+550px",
+                duration:4000
+            }).fadeTo("slow",0).animate({
+                left:"-1100px",
+                //duration:4000
+            }).fadeTo("fast",1).animate({
+                left:"+0px",
+               // right:"+550px"
+            }).queue();
+
+          //  $taskAnimate.clearQueue();
+       //   $(".inputArea").clearQueue();
         });
 
         controller.addResetView(function () {

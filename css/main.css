@@ -21,7 +21,13 @@
 	padding: 10px;
 	margin: 5%;
 }
-
+.userManagement{
+	position: relative;
+}
+.taskManagement{
+	position: relative;
+    overflow:hidden;
+}
 .todo-list .addUser input,
 .todo-list .addTask input {
 	display: block;
@@ -68,7 +74,7 @@
 .todo-list .active {
 	background: #c0c0c0;
 }
-.addUser{
+.addUser, .addTask{
 
 	position: relative;
 
@@ -76,8 +82,23 @@
 .usersList{
     background: #fff;
     top:-130px;
-   position: relative;
+    position: relative;
 }
 .welcomeUser h3{
     margin-top: 100px;
+}
+.inputArea{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+    top:-60px;
+}
+.welcomeTask{
+	display: inline-block;
+	position: relative;
+	left:-450px;
+}
+.tasksList{
+    position: relative;
+    top:-60px;
 }
