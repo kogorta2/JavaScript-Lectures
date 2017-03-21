@@ -39,10 +39,8 @@
                 duration:4000
             }).delay(1200).animate({
                 left:"+550px",
-               // duration:4000
             }).fadeTo("slow",0).animate({
                 left:"-450px",
-               // right:"0px"
             }).fadeTo("fast",1).queue();
 
             $(".inputArea").animate({
@@ -50,14 +48,9 @@
                 duration:4000
             }).fadeTo("slow",0).animate({
                 left:"-1100px",
-                //duration:4000
             }).fadeTo("fast",1).animate({
                 left:"+0px",
-               // right:"+550px"
             }).queue();
-
-          //  $taskAnimate.clearQueue();
-       //   $(".inputArea").clearQueue();
         });
 
         controller.addResetView(function () {

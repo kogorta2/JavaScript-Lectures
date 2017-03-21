@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccbb41b4-6cf7-4abd-ad88-4e20a29839b9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/addTaskForm.js" afterPath="$PROJECT_DIR$/js/addTaskForm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/addUserForm.js" afterPath="$PROJECT_DIR$/js/addUserForm.js" />
     </list>
@@ -56,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
@@ -69,29 +69,29 @@
       <file leaf-file-name="addTaskForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/addTaskForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="782">
+              <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
               <folding>
-                <marker date="1490105502516" expanded="true" signature="478:491" ph="..." />
-                <marker date="1490105502516" expanded="true" signature="478:975" ph="..." />
-                <marker date="1490105502516" expanded="true" signature="478:980" ph="..." />
-                <marker date="1490105502516" expanded="true" signature="591:960" ph="..." />
+                <marker date="1490105908873" expanded="true" signature="478:491" ph="..." />
+                <marker date="1490105908873" expanded="true" signature="478:975" ph="..." />
+                <marker date="1490105908873" expanded="true" signature="478:980" ph="..." />
+                <marker date="1490105908873" expanded="true" signature="591:960" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addUserForm.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addUserForm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/addUserForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+            <state relative-caret-position="204">
+              <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
               <folding>
-                <marker date="1490090359356" expanded="true" signature="478:680" ph="..." />
-                <marker date="1490090359356" expanded="true" signature="478:728" ph="..." />
-                <marker date="1490090359356" expanded="true" signature="478:746" ph="..." />
-                <marker date="1490090359356" expanded="true" signature="478:758" ph="..." />
-                <marker date="1490090359356" expanded="true" signature="478:809" ph="..." />
+                <marker date="1490105960702" expanded="true" signature="478:680" ph="..." />
+                <marker date="1490105960702" expanded="true" signature="478:728" ph="..." />
+                <marker date="1490105960702" expanded="true" signature="478:746" ph="..." />
+                <marker date="1490105960702" expanded="true" signature="478:758" ph="..." />
+                <marker date="1490105960702" expanded="true" signature="478:809" ph="..." />
               </folding>
             </state>
           </provider>
@@ -108,9 +108,9 @@
         <option value="$PROJECT_DIR$/JavaScript-Lectures-TODO_List/index.html" />
         <option value="$PROJECT_DIR$/JavaScript-Lectures-TODO_List/css/main.css" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/js/addUserForm.js" />
-        <option value="$PROJECT_DIR$/js/addTaskForm.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/addTaskForm.js" />
+        <option value="$PROJECT_DIR$/js/addUserForm.js" />
       </list>
     </option>
   </component>
@@ -268,12 +268,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490030625215</updated>
       <workItem from="1490030627074" duration="16202000" />
-      <workItem from="1490079768478" duration="25396000" />
+      <workItem from="1490079768478" duration="25740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41598000" />
+    <option name="totallyTimeSpent" value="41942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -341,10 +341,10 @@
         <state relative-caret-position="306">
           <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
-            <marker date="1490105502516" expanded="true" signature="478:491" ph="..." />
-            <marker date="1490105502516" expanded="true" signature="478:975" ph="..." />
-            <marker date="1490105502516" expanded="true" signature="478:980" ph="..." />
-            <marker date="1490105502516" expanded="true" signature="591:960" ph="..." />
+            <marker date="1490105908873" expanded="true" signature="478:491" ph="..." />
+            <marker date="1490105908873" expanded="true" signature="478:975" ph="..." />
+            <marker date="1490105908873" expanded="true" signature="478:980" ph="..." />
+            <marker date="1490105908873" expanded="true" signature="591:960" ph="..." />
           </folding>
         </state>
       </provider>
@@ -354,11 +354,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1490090359356" expanded="true" signature="478:680" ph="..." />
-            <marker date="1490090359356" expanded="true" signature="478:728" ph="..." />
-            <marker date="1490090359356" expanded="true" signature="478:746" ph="..." />
-            <marker date="1490090359356" expanded="true" signature="478:758" ph="..." />
-            <marker date="1490090359356" expanded="true" signature="478:809" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:680" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:728" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:746" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:758" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:809" ph="..." />
           </folding>
         </state>
       </provider>
@@ -439,38 +439,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/addUserForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-          <folding>
-            <marker date="1490090359356" expanded="true" signature="478:680" ph="..." />
-            <marker date="1490090359356" expanded="true" signature="478:728" ph="..." />
-            <marker date="1490090359356" expanded="true" signature="478:746" ph="..." />
-            <marker date="1490090359356" expanded="true" signature="478:758" ph="..." />
-            <marker date="1490090359356" expanded="true" signature="478:809" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/addTaskForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding>
-            <marker date="1490105502516" expanded="true" signature="478:491" ph="..." />
-            <marker date="1490105502516" expanded="true" signature="478:975" ph="..." />
-            <marker date="1490105502516" expanded="true" signature="478:980" ph="..." />
-            <marker date="1490105502516" expanded="true" signature="591:960" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/addTaskForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding>
+            <marker date="1490105908873" expanded="true" signature="478:491" ph="..." />
+            <marker date="1490105908873" expanded="true" signature="478:975" ph="..." />
+            <marker date="1490105908873" expanded="true" signature="478:980" ph="..." />
+            <marker date="1490105908873" expanded="true" signature="591:960" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/addUserForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding>
+            <marker date="1490105960702" expanded="true" signature="478:680" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:728" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:746" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:758" ph="..." />
+            <marker date="1490105960702" expanded="true" signature="478:809" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

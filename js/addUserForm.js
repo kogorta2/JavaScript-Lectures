@@ -30,27 +30,11 @@
         $viewTemplate.find(".addUserButton").on("click", function() {
             controller.addUser($userName.val(), $userEmail.val());
 			var $userAnimate=$viewTemplate;
-			// var $welcomeUser=$("<div class='welcomeUser'><h3>User was added</h3></div>");
-			// $welcomeUser.css({
-			// 	"background":"blue",
-			// 	"position":"relative",
-			// 	"height":"100px"
-			// }).appendTo($userAnimate);
-			// $userAnimate.css({
-			// 	"position":"relative"
-             //    }).animate({
-				// bottom:"+100px",
-				// duration:4000
-				// })
-			// $userAnimate.hide({queue:true});
+
             $userAnimate.animate({
                 bottom:"+150px",
                 duration:4000
             }).fadeTo("slow",0).animate({bottom:"0"}).fadeTo("fast",1);
-            //$userAnimate.stop(true,false);
-
-
-
         });
 
         controller.addResetView(function () {
