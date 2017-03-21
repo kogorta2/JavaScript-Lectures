@@ -68,3 +68,16 @@
 .todo-list .active {
 	background: #c0c0c0;
 }
+.addUser{
+
+	position: relative;
+
+}
+.usersList{
+    background: #fff;
+    top:-130px;
+   position: relative;
+}
+.welcomeUser h3{
+    margin-top: 100px;
+}
