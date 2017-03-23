@@ -1,18 +1,31 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Lecture_21</title>
+		<title>Lecture_22</title>
 		<link type="text/css" rel="stylesheet" media="all" href="css/main.css" />
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 		<script src="js/main.js" defer></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 	</head>
-	<body>
+	<body ng-app="app"> <!--rootScope-->
 		<!-- This is base template for testing -->
-		<h1 class="mainTitle">
+		<div ng-controller="myCtrl as myCtrl">
+		<h1 class="mainTitle"ng-controller="myCtrl as myCtrl"> 
+		{{test=25}}
 			<img class="logo" src="images/logo.png" alt=""/>
-			<span class="text">Lecture_21</span>
+			<span class="text">{{myCtrl.serverData.myKey1}}</span>
 		</h1>
+		<h1>{{myCtrl.serverData.myKey2|price}}</h1>
+		<button type="button" ng-click="myCtrl.askUser()">Ask user</button>
+		<p>{{myCtrl.userAction}}</p>
+		<div
+			ng-bind-html="myCtrl.html1|toHtml">
+		</div>
+		<div
+			ng-bind-html="myCtrl.html2|toHtml">
+		</div>
+		<h1>Timer:</h1>
+		</div>
 	</body>
 </html>
