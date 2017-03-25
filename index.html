@@ -10,8 +10,8 @@
 	</head>
 	<body ng-app="app"> <!--rootScope-->
 		<!-- This is base template for testing -->
-		<div ng-controller="myCtrl as myCtrl">
-		<h1 class="mainTitle"ng-controller="myCtrl as myCtrl"> 
+		<div class="controller" ng-controller="myCtrl as myCtrl">
+		<h1 class="mainTitle"ng-controller="myCtrl as myCtrl" ng-if="myCtrl.usersFilter!=='2'"> 
 		{{test=25}}
 			<img class="logo" src="images/logo.png" alt=""/>
 			<span class="text">{{myCtrl.serverData.myKey1}}</span>
@@ -25,7 +25,49 @@
 		<div
 			ng-bind-html="myCtrl.html2|toHtml">
 		</div>
-		<h1>Timer:</h1>
+		<h1
+			ng-mousmove="myCtrl.timer=$event.clientX"
+		>Timer:{{myCtrl.timer}}</h1>
+		
+		<h2 ng-hide="myCtrl.usersFilter.length">{{myCtrl.date|date:'medium'}}</h2>
+		<input type="text" 
+		ng-model="myCtrl.usersFilter"
+		ng-model-options="{
+			updateOn:'blur',
+			debounce:1000
+		}"
+		ng-blur="myCtrl.serverData.myKey2=myCtrl.serverData.myKey2+'blur';myCtrl.onBlur($event)"
+		ng-keyup="$event.keyCode===13&&myCtrl.onBlur($event.keyCode)"
+		ng-change="myCtrl.onBlur($event.keyCode)"
+		ng-focus="myCtrl.onBlur('ngFocus')"
+		/>
+		<h1>{{myCtrl.selectedOption}}</h1>
+		Required input <input type="text"/>
+		<select
+			ng-model="myCtrl.selectedOption"
+			ng-options="item.value as item.labl for item in myCtrl.options"
+		></select>
+		<div>{{myCtrl.names}}</div>
+		<input type="checkbox" ng-checked="true" ng-disabled="myCtrl.usersFilter.length"/>	
+		<h1>{{232465.464646|number|price}}</h1>
+		<ul>
+			<li ng-repeat="user in myCtrl.serverData.testArray |filter: myCtrl.usersFilterMethod| orderBy:'age':true| limitTo:1 track by user.email"
+			ng-init="myCtrl.names[$index]=user.name"
+			ng-class="{
+				'classRed':$first,
+				'classBlue':$last
+			}"
+			>
+				<h2>{{::user.name|lowercase}}</h2>
+				<h2>{{::user.email|uppercase}}</h2>
+				<h3>Age:{{::user.age}}</h3>
+				
+				<h3>Age:{{$first}}</h3>
+				<h3>Age:{{$index}}</h3>
+				<h3>Age:{{$last}}}</h3>
+			</li>
+		<!--	<li ng-repeat="user in myCtrl.serverData.testArray track by $index"></li> -->
+		</ul>
 		</div>
 	</body>
 </html>
