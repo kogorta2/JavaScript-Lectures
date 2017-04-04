@@ -68,6 +68,41 @@
 			</li>
 		<!--	<li ng-repeat="user in myCtrl.serverData.testArray track by $index"></li> -->
 		</ul>
+		<h1>Massages</h1>
+		<h2>New massages:{{myCtrl.getMassage()}}</h2>
+		<h3>Massages count:{{myCtrl.getMassageCount()}}</h3>
+		
+		<form action="#"
+		ng-controller="massagesController as massagesController"
+		>
+		</form>
+		<my-massager
+		title="Send Massege Form"
+		on-massage-sent="massagesController.sendMassage(massage)"
+		></my-massager>
 		</div>
+		
+		<h1
+		 style="position:fixed;right:50px;bottom:50px;"
+		>^^ Scroll top ^^</h1>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</body>
 </html>
