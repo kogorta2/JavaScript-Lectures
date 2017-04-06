@@ -3,6 +3,6 @@
 	
 	angular.module("newsfeed")
 	.constant("NEWSFEED_URL_CONSTANTS",{
-		"GET_NEWSFEED":"http://www.mocky.io/v2/58d4161a100000db0cd7a6b5"
+		"GET_NEWSFEED":"http://www.mocky.io/v2/58e6872b0f0000b6044aee6f"
 	})
 })
