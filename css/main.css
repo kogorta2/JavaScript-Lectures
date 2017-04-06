@@ -8,3 +8,66 @@
 .mainTitle .text {
 	vertical-align:middle;
 }
+.controller{
+	width:66%;
+	margin:0 auto;
+}
+.classRed{
+	color:red;
+}
+.classBlue{
+	color:blue;
+}
+.popupForm{
+	display:block;
+	text-align:center;
+	width:60%;
+	background:#eee;
+	padding:10px 0 30px;
+	border-radius:10px;
+	box-shadow:5px 5px 15px rgba(0,0,0,0.2);
+	position:fixed;
+	left:50%;
+	top:40%;
+	transform:translate(-50%,-50%);
+}
+.popupForm.close{
+	position:absolute;
+	right:10px;
+	top:25px;
+	cursor:pointer;
+}
+.formSection{
+	width:40%;
+	display:inline-block;
+}
+.formSection input, .formSection textarea, .formSection select{
+	width:80%;
+}
+.newsfeed{
+	width:80%;
+	margin:50px auto;
+}
+.ng-invalid.ng-touched, .ng-submitted .ng-invalid{
+	border-color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

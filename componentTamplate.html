@@ -1,0 +1,10 @@
+<div>
+	<h1>{{myMassager.title}}</h1>
+	<form action="#"
+		ng-controller="massagesController as massagesController"
+		>
+		<textarea
+		ng-model="massagesController.massageField"></textarea>
+		<button type="button"
+		ng-click="myMassager.sendMassage(myMassager.massageField)"
+</div>

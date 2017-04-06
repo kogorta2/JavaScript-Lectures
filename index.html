@@ -1,18 +1,126 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Lecture_21</title>
+		<title>Lecture_24</title>
 		<link type="text/css" rel="stylesheet" media="all" href="css/main.css" />
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 		<script src="js/main.js" defer></script>
+		<script src="js/newsfeedModule.js" defer></script>
+		<script src="js/newsfeedController.js" defer></script>
+		<script src="js/newsfeedConstants.js" defer></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 	</head>
-	<body>
+	<body ng-app="app" ng-cloak>
 		<!-- This is base template for testing -->
+		
+		
 		<h1 class="mainTitle">
 			<img class="logo" src="images/logo.png" alt=""/>
-			<span class="text">Lecture_21</span>
+			<span class="text">Newsfeed</span>
 		</h1>
+		<div class="newsfeed"
+		ng-controller="newsfeed as newsfeed"
+		>
+		<button type="button"
+		ng-click="newsfeed.showEditPopup()"
+		>Add new Article</button>
+		<div class="popupForm"
+		ng-show="newsfeed.editPopupVisible"
+		>
+		<form name="newsfeed.newArticleForm" novalidate>
+		<span class="close"
+		ng-click="newsfeed.hideEditPopup()"
+		>X</span>
+		<div class="formSection">
+		<p>Article Type</p>
+			<select
+			ng-model="newsfeed.newArticleModel.type"
+			>
+			<option value="article">Article</option>
+			<option value="photos">photos</option>
+			<option value="video">video</option>
+			</select>
+			</div>
+			<div class="formSection">
+			<p>Title</p>
+			<input type="text"
+			ng-model="newsfeed.newArticleModel.title"
+			/>
+			</div>
+			<div class="formSection"
+			ng-show="newsfeed.newArticleModel.type==='article'||newsfeed.newArticleModel.type==='video'"
+			>
+			<p>Main Photo</p>
+			<input type="text"
+			ng-model="newsfeed.newArticleModel.mainPhoto"
+			/>
+			</div>
+			<div class="formSection">
+			<p>Description</p>
+			<textarea
+			ng-model="newsfeed.newArticleModel.description"
+			></textarea>
+			</div>
+			<div class="formSection">
+			<p>Photos</p>
+			<input type="text"
+			ng-repeat="photo in newsfeed.newArticleModel.photos track by index"
+			ng-model="newsfeed.newArticleModel.photos[$index]"
+			/>
+			</div>
+			<button type="button">Remove photo</button>
+			<button type="button">Add photo</button>
+			<div class="formSection">
+			<p>Video</p>
+		<input type="text"
+			ng-model="newsfeed.newArticleModel.video"
+			/></div>
+			<div class="formSection">
+			<button type="button"
+			ng-click="newsfeed.saveArticle()"
+			>Save</button>
+			</div>
+			<div class="formSection">
+			<button type="button"
+			ng-click="newsfeed.hideEditPopup()"
+			>Cansel</button>
+			</div>
+			
+			</form>
+		</div>
+		<!--Popup End-->
+		<!--Article list start-->
+		<ul>
+		<li ng-repeat="article in newsfeed.artic"></li>
+		</ul>
+		
+		<!--Article list end-->
+		
+		</div>
 	</body>
+	
+	
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
